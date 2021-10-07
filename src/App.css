@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+  font-family: Gravity_Regular;
+}
+
+.App-header {
+  min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 3vh;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  padding-bottom: 40px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #5d4954;  
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+.nav-links a.active {
+  color: black;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: 5d4954;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.banner_logo {
+  height: auto;
+  max-width: 70%;
+  max-height: 100px;
+}
+
+footer {
+	background-color: #282c34;
+	color: white;
+}
+
+.insta {
+	color: burlywood;
+}
+
+/* End Navigation */
+
+/* Grid Alignment  */
+
+.grid {
+  justify-content: space-around;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.grid .grid_item {
+  text-align: center;
+}
+
+.grid img {
+  max-height: 250px;
+  max-width: 95%;
+}
+.grid img:hover {
+  -moz-box-shadow: 0 0 10px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.grid p {
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* End Grid Alignment */
+
+/* Home Page */
+
+.landing_img {
+  margin: 0 auto;
+  height: auto;
+  max-height: 900px;
+  max-width: 80%;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+}
+
+.card img {
+  	height: 250px;
+  	width: 250px;
+  	padding: 20px 15px 15px 10px;
+
+}
+
+.card p {
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+}
+/* End Home Page  */
+/* Fonts  */
+@font-face {
+  font-family: Gravity_Regular;
+  src: url('./fonts/GravityRegular/Gravity-Book.eot');
+  src: url('./fonts/GravityRegular/Gravity-Book.woff2') format('woff2'),
+	   url('./fonts/GravityRegular/Gravity-Book.woff') format('woff'),
+	   url('./fonts/GravityRegular/Gravity-Book.ttf') format('truetype'),
+	   url('./fonts/GravityRegular/Gravity-Book.svg#customFont') format('svg'),
+	   url('./fonts/GravityRegular/Gravity-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gravity_Bold;
+  src: url('./fonts/GravityBold/Gravity-Bold.eot');
+  src: url('./fonts/GravityBold/Gravity-Bold.woff2') format('woff2'),
+	   url('./fonts/GravityBold/Gravity-Bold.woff') format('woff'),
+	   url('./fonts/GravityBold/Gravity-Bold.ttf') format('truetype'),
+	   url('./fonts/GravityBold/Gravity-Bold.svg#customFont') format('svg'),
+	   url('./fonts/GravityBold/Gravity-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* END Fonts */
+
