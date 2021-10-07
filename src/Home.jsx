@@ -2,22 +2,23 @@ import React from "react";
 import Card from "./Card";
 import river_close from "./photos/river_close_coffee_1_by_1.png"
 import coasters from "./photos/coasters_stack.png"
+import desk_close from "./photos/desk_close.png"
 import landing from "./photos/landing.png"
 
 const cards = [
     {
         imgSrc: river_close,
-        details: "these are the details",
+        details: "Coffee Tables",
         id: "1",
     },
     {
         imgSrc: coasters,
-        details: "these are the other details",
+        details: "Coasters",
         id: "2",
     },
     {
-        imgSrc: landing,
-        details: "these are the last details",
+        imgSrc: desk_close,
+        details: "Desks",
         id: "3",
     },
 ];

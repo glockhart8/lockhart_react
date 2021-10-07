@@ -6,7 +6,7 @@ const Card = (props) => {
 
     return (
         <React.Fragment>
-            <img src={imgSrc} />
+            <img src={imgSrc} id={id} alt={details}/>
             {/* <p className="cardDetails">{details}</p> */}
         </React.Fragment>
     );

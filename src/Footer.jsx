@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, IconName } from "react-icons/fa"
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                 Powered by GRIFFIN LOCKHART
             </h2>
             <h3>
-                <br></br>Instagram: <a className="insta" href="https://www.instagram.com/griffinjl8/">@griffinjl8</a>
+                <br></br> <a className="insta" href="https://www.instagram.com/griffinjl8/"><FaInstagram /></a>
             </h3>
         </footer>
     );
