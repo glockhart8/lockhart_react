@@ -1,0 +1,28 @@
+.card {
+	display: flex;
+	justify-content: space-around;
+  padding-top: 50px;
+}
+
+.card img {
+  	height: 250px;
+  	width: 250px;
+}
+
+.card img:hover {
+  -moz-box-shadow: 0 0 10px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+@media screen and (max-width:800px) {
+    .card {
+      padding: 0px;
+    }
+    
+    .card img {
+        height: 250px;
+        width: 250px;
+    }
+    
+  }

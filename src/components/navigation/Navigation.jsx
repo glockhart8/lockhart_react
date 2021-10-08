@@ -6,6 +6,8 @@ import Contact from '../tabs/Contact';
 import CoffeeTables from "../cards/CoffeeTables";
 import Coasters from "../cards/Coasters";
 import Desks from "../cards/Desks";
+import Tables from "../cards/Tables";
+import './navigation.css';
 import {
   Switch,
   Route,
@@ -22,7 +24,7 @@ const Navigation = () => {
 
 		// burger.addEventListener('click', ()=> {
 			// Toggle Nav
-			nav.classList.toggle('nav-active');
+			nav.classList.toggle('active');
 
 			navLinks.forEach((link, index) => {
 				if(link.style.animation) {
@@ -99,8 +101,11 @@ const Navigation = () => {
 					<Route path="/coasters">
 						<Coasters />
 					</Route>
-					<Route path="/Desks">
+					<Route path="/desks">
 						<Desks />
+					</Route>
+					<Route path="/tables">
+						<Tables />
 					</Route>
 					<Route path="/">
 						<Home />

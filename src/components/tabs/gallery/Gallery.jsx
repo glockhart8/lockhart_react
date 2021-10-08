@@ -5,6 +5,7 @@ import coffee from "./photos/coffee.png"
 import desk from "./photos/desk.png"
 import gray from "./photos/gray_table.png"
 import dark_table from "./photos/dark_table.png"
+import './gallery.css';
 
 const Gallery = () => {
     return (

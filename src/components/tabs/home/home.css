@@ -1,0 +1,14 @@
+.landing_img {
+    margin: 0 auto;
+    height: auto;
+    max-height: 900px;
+    max-width: 80%;
+  }
+
+@media screen and (max-width:800px) {
+    .landing_img {
+        margin: 0 auto;
+        height: auto;
+        max-width: 100%;
+    }
+  }
