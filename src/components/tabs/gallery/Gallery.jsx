@@ -2,9 +2,9 @@ import React from "react";
 import epoxy from "./photos/epoxy.png"
 import round from "./photos/round.png"
 import coffee from "./photos/coffee.png"
-import desk from "./photos/desk.jpg"
-import gray from "./photos/gray_table.JPEG"
-import dark_table from "./photos/dark_table.JPG"
+import desk from "./photos/desk.png"
+import gray from "./photos/gray_table.png"
+import dark_table from "./photos/dark_table.png"
 
 const Gallery = () => {
     return (
