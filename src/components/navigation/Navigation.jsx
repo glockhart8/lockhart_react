@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import banner_pic from './photos/LOCKHART.png';
-import Home from './Home';
-import Gallery from './Gallery';
-import Contact from './Contact';
+import Home from '../tabs/home/Home';
+import Gallery from '../tabs/gallery/Gallery';
+import Contact from '../tabs/Contact';
+import CoffeeTables from "../cards/CoffeeTables";
+import Coasters from "../cards/Coasters";
+import Desks from "../cards/Desks";
 import {
   Switch,
   Route,
@@ -89,6 +92,15 @@ const Navigation = () => {
 					</Route>
 					<Route path="/gallery">
 						<Gallery />
+					</Route>
+					<Route path="/coffee-tables">
+						<CoffeeTables />
+					</Route>
+					<Route path="/coasters">
+						<Coasters />
+					</Route>
+					<Route path="/Desks">
+						<Desks />
 					</Route>
 					<Route path="/">
 						<Home />

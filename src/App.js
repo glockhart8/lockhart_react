@@ -1,5 +1,5 @@
-import Navigation from './Navigation';
-import Footer from './Footer';
+import Navigation from './components/navigation/Navigation';
+import Footer from './components/Footer';
 import './App.css';
 
 
