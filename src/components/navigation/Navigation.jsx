@@ -89,9 +89,6 @@ const Navigation = () => {
 					</ul>
 				</nav>
 				<Switch>
-					<Route path="/">
-						<Home />
-					</Route>
 					<Route path="/gallery">
 						<Gallery />
 					</Route>
@@ -109,6 +106,9 @@ const Navigation = () => {
 					</Route>
 					<Route path="/tables">
 						<Tables />
+					</Route>
+					<Route path="/">
+						<Home />
 					</Route>
 				</Switch>
         </React.Fragment>
