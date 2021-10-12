@@ -5,27 +5,33 @@ import tables from "../tabs/home/photos/table.png";
 
 export const SliderData = [
     {
+        imgSrc: tables,
+        link: "./tables",
+        details: "tables2",
+        id: "0",
+    },
+    {
         imgSrc: river_close,
         link: "./coffee-tables",
         details: "Coffee Tables",
-        id: "0",
+        id: "1",
     },
     {
         imgSrc: coasters,
         link: "./coasters",
         details: "Coasters",
-        id: "1",
+        id: "2",
     },
     {
         imgSrc: desk_close,
         link: "./desks",
         details: "Desks",
-        id: "2",
+        id: "3",
     },
     {
         imgSrc: tables,
         link: "./tables",
         details: "Tables",
-        id: "3",
+        id: "4",
     },
 ];

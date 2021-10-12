@@ -1,14 +1,11 @@
 .slider {
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     display: flex;
-    top: 10vh;
 }
 
 .icon {
-    position: absolute;
-    top: 50%;
     font-size: 2rem;
     color: #000;
     cursor: pointer;
@@ -28,10 +25,13 @@
     transition-duration: 2s;
 }
 
+.slide.inactive {
+    position: absolute;
+}
+
 .slide.active {
     opacity: 1;
     transition-duration: 2s;
-    position: absolute;
 }
 
 .slide.first {

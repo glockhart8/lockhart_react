@@ -31,10 +31,6 @@ nav {
   .nav-links a.active {
     color: black;
   }
-  
-  /* .nav-active {
-    transform: translateX(0%);
-  } */
 
 .banner_logo {
     height: auto;
