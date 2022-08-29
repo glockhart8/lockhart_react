@@ -1,33 +1,27 @@
 /* Grid Alignment  */
 
-.grid {
+.grid_photo {
     justify-content: space-around;
     align-items: center;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
   }
   
-  .grid .grid_item {
+  .grid_photo .grid_item {
     text-align: center;
   }
   
-  .grid img {
-    max-height: 250px;
-    max-width: 95%;
+  .grid_photo img {
+    max-height: 40%;
+    max-width: 99%;
     opacity: .9;
+    margin-bottom: 10px;
   }
   
-  .grid img:hover {
+  .grid_photo img:hover {
     -moz-box-shadow: 0 0 5px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 5px rgb(0, 0, 0);
     box-shadow: 0 0 5px rgb(0, 0, 0);
     opacity: 1;
   }
-  
-  .grid p {
-    text-decoration: none;
-    font-size: 17px;
-    text-align: center;
-  }
-  
   /* End Grid Alignment */

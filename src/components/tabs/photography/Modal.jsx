@@ -1,5 +1,5 @@
 import React from "react";
-import './css/modal.css';
+import './css/photography_modal.css';
 import { motion } from 'framer-motion';
 
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import banner_pic from './photos/LOCKHART.png';
 import Home from '../tabs/home/Home';
 import Gallery from '../tabs/gallery/Gallery';
+import Graphics from '../tabs/graphics/Graphics';
 import Contact from '../tabs/Contact';
 import CoffeeTables from "../cards/CoffeeTables";
 import Coasters from "../cards/Coasters";
@@ -44,6 +45,7 @@ const Navigation = () => {
 	const [homeLink, setHomeLinkActive] = useState(true);
 	const [woodworkingLink, setWoodworkingLinkActive] = useState(false);
 	const [galleryLink, setGalleryLinkActive] = useState(false);
+	const [graphicsLink, setGraphicsLinkActive] = useState(false);
 	const [contactLink, setContactLinkActive] = useState(false);
 
 	// Toggling the links based on which is active
@@ -53,30 +55,42 @@ const Navigation = () => {
 				setHomeLinkActive(true);
 				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
+				setGraphicsLinkActive(false);
 				setContactLinkActive(false);	
 			break;
 			case 2:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(true);
 				setGalleryLinkActive(false);
+				setGraphicsLinkActive(false);
 				setContactLinkActive(false);
 			break;
 			case 3:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(true);
+				setGraphicsLinkActive(false);
 				setContactLinkActive(false);
 			break;
 			case 4:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
+				setGraphicsLinkActive(true);
+				setContactLinkActive(false);
+			break;
+			case 5:
+				setHomeLinkActive(false);
+				setWoodworkingLinkActive(false);
+				setGalleryLinkActive(false);
+				setGraphicsLinkActive(false);
 				setContactLinkActive(true);
 			break;
 			default:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
+				setGraphicsLinkActive(false);
 				setContactLinkActive(false);
 		}
 	}
@@ -98,7 +112,8 @@ const Navigation = () => {
 						<li className="first"><Link className={homeLink ? "active" : ""} onClick={() => toggleNavActive(1)}  id="home" to="./">HOME</Link></li>
 						<li className="notfirst"><Link className={woodworkingLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="woodworking" to="./gallery">WOODWORKING</Link></li>
 						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="gallery" to="./photography">PHOTOGRAPHY</Link></li>
-						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(4)} id="contact" to="./contact">CONTACT</Link></li>
+						<li className="notfirst"><Link className={graphicsLink ? "active" : ""} onClick={() => toggleNavActive(4)} id="gallery" to="./graphics">GRAPHICS</Link></li>
+						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(5)} id="contact" to="./contact">CONTACT</Link></li>
 					</ul>
 				</nav>
 				<Switch>
@@ -107,6 +122,9 @@ const Navigation = () => {
 					</Route>
 					<Route path="/photography">
 						<Photography />
+					</Route>
+					<Route path="/graphics">
+						<Graphics />
 					</Route>
 					<Route path="/contact">
 						<Contact />

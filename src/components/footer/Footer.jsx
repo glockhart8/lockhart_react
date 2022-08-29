@@ -4,7 +4,7 @@ import './footer.css';
 
 const Footer = () => {
     return (
-        <footer className="grid">
+        <footer className="grid_footer">
             <h3>
                 <br/> {/*Empty Grid placeholder */}
             </h3>

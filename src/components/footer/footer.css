@@ -8,3 +8,10 @@ footer {
 	color: burlywood;
 	padding-right: 10pt;
 }
+
+.grid_footer {
+    justify-content: space-around;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
