@@ -1,10 +1,17 @@
-import shiloh from"../photos/blue_eyed_shepherd.png";
+import shiloh from "../photos/shiloh.png";
+import shiloh_small from "../photos/shiloh_small.png";
 import boats from "../photos/boats_2.png";
+import boats_small from "../photos/boats_small.png";
 import canon from "../photos/canon_fireball.png";
+import canon_small from "../photos/canon_small.png";
 import dash from "../photos/dash.png";
-import ryan from "../photos/natureBack.png";
+import dash_small from "../photos/dash_small.png";
+import ryan from "../photos/ryan.png";
+import ryan_small from "../photos/ryan_small.png";
 import bmw from "../photos/white_bmw.png";
+import bmw_small from "../photos/white_bmw_small.png";
 import lincoln from "../photos/lincoln.png";
+import lincoln_small from "../photos/lincoln_small.png";
 import '../css/gallery.css';
 
 const PhotoDisplay = ({ setSelectedImg }) => {
@@ -12,25 +19,25 @@ const PhotoDisplay = ({ setSelectedImg }) => {
         <div className="grid_photo">
 
             <div className="grid_item">
-                <img src={shiloh} alt="dog" onClick={() => setSelectedImg(shiloh)}/>
+                <img src={shiloh_small} alt="dog" onClick={() => setSelectedImg(shiloh)}/>
             </div>
             <div className="grid_item">
-                <img src={boats} alt="boats" onClick={() => setSelectedImg(boats)}/>
+                <img src={boats_small} alt="boats" onClick={() => setSelectedImg(boats)}/>
             </div>
             <div className="grid_item">
-                <img src={canon} alt="camera" onClick={() => setSelectedImg(canon)}/>
+                <img src={canon_small} alt="camera" onClick={() => setSelectedImg(canon)}/>
             </div>
             <div className="grid_item">
-                <img src={dash} alt="dash" onClick={() => setSelectedImg(dash)}/>
+                <img src={dash_small} alt="dash" onClick={() => setSelectedImg(dash)}/>
             </div>
             <div className="grid_item">
-                <img src={bmw} alt="bmw" onClick={() => setSelectedImg(bmw)}/>
+                <img src={bmw_small} alt="bmw" onClick={() => setSelectedImg(bmw)}/>
             </div>
             <div className="grid_item">
-                <img src={lincoln} alt="lincoln_rock" onClick={() => setSelectedImg(lincoln)}/>
+                <img src={lincoln_small} alt="lincoln_rock" onClick={() => setSelectedImg(lincoln)}/>
             </div>
             <div className="grid_item">
-                <img src={ryan} alt="ryan" onClick={() => setSelectedImg(ryan)}/>
+                <img src={ryan_small} alt="ryan" onClick={() => setSelectedImg(ryan)}/>
             </div>
         </div>
     )

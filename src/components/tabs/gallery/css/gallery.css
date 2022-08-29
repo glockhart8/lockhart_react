@@ -16,18 +16,11 @@
 }
 
 .grid_photo {
-    justify-content: space-around;
-    align-items: center;
     display: grid;
     grid-template-columns: 50% 50%;
 }
   
-.grid_photo .grid_item {
-    text-align: center;
-}
-  
 .grid_photo img {
-    max-width: 99%;
     opacity: .9;
 }
   
