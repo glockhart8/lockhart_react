@@ -13,6 +13,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Photography from "../tabs/photography/Photography";
 
 const Navigation = () => {
 
@@ -41,6 +42,7 @@ const Navigation = () => {
 
 	// Creating a state for the link 
 	const [homeLink, setHomeLinkActive] = useState(true);
+	const [woodworkingLink, setWoodworkingLinkActive] = useState(false);
 	const [galleryLink, setGalleryLinkActive] = useState(false);
 	const [contactLink, setContactLinkActive] = useState(false);
 
@@ -49,21 +51,31 @@ const Navigation = () => {
 		switch(param) {
 			case 1:
 				setHomeLinkActive(true);
+				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
 				setContactLinkActive(false);	
 			break;
 			case 2:
 				setHomeLinkActive(false);
-				setGalleryLinkActive(true);
+				setWoodworkingLinkActive(true);
+				setGalleryLinkActive(false);
 				setContactLinkActive(false);
 			break;
 			case 3:
 				setHomeLinkActive(false);
+				setWoodworkingLinkActive(false);
+				setGalleryLinkActive(true);
+				setContactLinkActive(false);
+			break;
+			case 4:
+				setHomeLinkActive(false);
+				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
 				setContactLinkActive(true);
 			break;
 			default:
 				setHomeLinkActive(false);
+				setWoodworkingLinkActive(false);
 				setGalleryLinkActive(false);
 				setContactLinkActive(false);
 		}
@@ -84,13 +96,17 @@ const Navigation = () => {
 				<nav>
 					<ul className="nav-links">
 						<li className="first"><Link className={homeLink ? "active" : ""} onClick={() => toggleNavActive(1)}  id="home" to="./">HOME</Link></li>
-						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="gallery" to="./gallery">GALLERY</Link></li>
-						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="contact" to="./contact">CONTACT</Link></li>
+						<li className="notfirst"><Link className={woodworkingLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="woodworking" to="./gallery">WOODWORKING</Link></li>
+						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="gallery" to="./photography">PHOTOGRAPHY</Link></li>
+						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(4)} id="contact" to="./contact">CONTACT</Link></li>
 					</ul>
 				</nav>
 				<Switch>
 					<Route path="/gallery">
 						<Gallery />
+					</Route>
+					<Route path="/photography">
+						<Photography />
 					</Route>
 					<Route path="/contact">
 						<Contact />
