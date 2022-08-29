@@ -1,7 +1,7 @@
-import aceu from "./photos/aceu_led.png";
-import bd from "./photos/between2doors_led.png";
+import aceu from "../photos/aceu_led.png";
+import bd from "../photos/between2doors_led.png";
 
-import '../photography/css/displayPhotos.css';
+import '../css/gallery.css';
 
 const PhotoDisplay = ({ setSelectedImg }) => {
     return (

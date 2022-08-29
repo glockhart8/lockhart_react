@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Modal from "./Modal";
-import GraphicsDisplay from "./GraphicsDisplay.jsx";
+import Modal from "../Modal";
+import PhotoDisplay from "./PhotoDisplay";
 
-const Graphics = () => {
+const Photography = () => {
 
     const [selectedImg, setSelectedImg] = useState(null);
 
     return (
         <React.Fragment>
-            <GraphicsDisplay setSelectedImg={setSelectedImg} />
+            <PhotoDisplay setSelectedImg={setSelectedImg} />
             { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} /> }
         </React.Fragment>
     );
 }
 
-export default Graphics;
+export default Photography;

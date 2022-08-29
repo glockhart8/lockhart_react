@@ -15,3 +15,9 @@ footer {
     display: grid;
     grid-template-columns: 33% 33% 33%;
   }
+
+  h2 { 
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy; 
+    font-size: 24px; 
+    font-style: normal;
+  }

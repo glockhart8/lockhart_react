@@ -1,11 +1,11 @@
-import shiloh from"./photos/blue_eyed_shepherd.png";
-import boats from "./photos/boats_2.png";
-import canon from "./photos/canon_fireball.png";
-import dash from "./photos/dash.png";
-import ryan from "./photos/natureBack.png";
-import bmw from "./photos/white_bmw.png";
-import lincoln from "./photos/lincoln.png";
-import './css/displayPhotos.css';
+import shiloh from"../photos/blue_eyed_shepherd.png";
+import boats from "../photos/boats_2.png";
+import canon from "../photos/canon_fireball.png";
+import dash from "../photos/dash.png";
+import ryan from "../photos/natureBack.png";
+import bmw from "../photos/white_bmw.png";
+import lincoln from "../photos/lincoln.png";
+import '../css/gallery.css';
 
 const PhotoDisplay = ({ setSelectedImg }) => {
     return (

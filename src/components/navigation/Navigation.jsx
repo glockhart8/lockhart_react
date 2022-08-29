@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import banner_pic from './photos/LOCKHART.png';
-import Home from '../tabs/home/Home';
-import Gallery from '../tabs/gallery/Gallery';
-import Graphics from '../tabs/graphics/Graphics';
-import Contact from '../tabs/Contact';
 import CoffeeTables from "../cards/CoffeeTables";
 import Coasters from "../cards/Coasters";
 import Desks from "../cards/Desks";
 import Tables from "../cards/Tables";
 import './navigation.css';
+
+import Home from '../tabs/home/Home';
+import Gallery from '../tabs/gallery/Gallery';
+import Graphics from '../tabs/gallery/graphics/Graphics';
+import Photography from '../tabs/gallery/photography/Photography';
+import Woodworking from '../tabs/gallery/woodworking/Woodworking';
+import Contact from '../tabs/Contact';
 import {
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import Photography from "../tabs/photography/Photography";
+
 
 const Navigation = () => {
 
@@ -43,9 +46,7 @@ const Navigation = () => {
 
 	// Creating a state for the link 
 	const [homeLink, setHomeLinkActive] = useState(true);
-	const [woodworkingLink, setWoodworkingLinkActive] = useState(false);
-	const [galleryLink, setGalleryLinkActive] = useState(false);
-	const [graphicsLink, setGraphicsLinkActive] = useState(false);
+	const [galleryLink, setWoodworkingLinkActive] = useState(false);
 	const [contactLink, setContactLinkActive] = useState(false);
 
 	// Toggling the links based on which is active
@@ -54,43 +55,21 @@ const Navigation = () => {
 			case 1:
 				setHomeLinkActive(true);
 				setWoodworkingLinkActive(false);
-				setGalleryLinkActive(false);
-				setGraphicsLinkActive(false);
 				setContactLinkActive(false);	
 			break;
 			case 2:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(true);
-				setGalleryLinkActive(false);
-				setGraphicsLinkActive(false);
 				setContactLinkActive(false);
 			break;
 			case 3:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(false);
-				setGalleryLinkActive(true);
-				setGraphicsLinkActive(false);
-				setContactLinkActive(false);
-			break;
-			case 4:
-				setHomeLinkActive(false);
-				setWoodworkingLinkActive(false);
-				setGalleryLinkActive(false);
-				setGraphicsLinkActive(true);
-				setContactLinkActive(false);
-			break;
-			case 5:
-				setHomeLinkActive(false);
-				setWoodworkingLinkActive(false);
-				setGalleryLinkActive(false);
-				setGraphicsLinkActive(false);
 				setContactLinkActive(true);
 			break;
 			default:
 				setHomeLinkActive(false);
 				setWoodworkingLinkActive(false);
-				setGalleryLinkActive(false);
-				setGraphicsLinkActive(false);
 				setContactLinkActive(false);
 		}
 	}
@@ -110,10 +89,8 @@ const Navigation = () => {
 				<nav>
 					<ul className="nav-links">
 						<li className="first"><Link className={homeLink ? "active" : ""} onClick={() => toggleNavActive(1)}  id="home" to="./">HOME</Link></li>
-						<li className="notfirst"><Link className={woodworkingLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="woodworking" to="./gallery">WOODWORKING</Link></li>
-						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="gallery" to="./photography">PHOTOGRAPHY</Link></li>
-						<li className="notfirst"><Link className={graphicsLink ? "active" : ""} onClick={() => toggleNavActive(4)} id="gallery" to="./graphics">GRAPHICS</Link></li>
-						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(5)} id="contact" to="./contact">CONTACT</Link></li>
+						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="gallery" to="./gallery">GALLERY</Link></li>
+						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="contact" to="./contact">CONTACT</Link></li>
 					</ul>
 				</nav>
 				<Switch>
@@ -125,6 +102,9 @@ const Navigation = () => {
 					</Route>
 					<Route path="/graphics">
 						<Graphics />
+					</Route>
+					<Route path="/woodworking">
+						<Woodworking />
 					</Route>
 					<Route path="/contact">
 						<Contact />

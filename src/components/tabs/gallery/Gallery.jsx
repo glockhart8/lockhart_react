@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import Modal from "./Modal";
-import PhotoGallery from "./PhotoGallery";
+import React from "react";
+import GalleryDisplay from "./GalleryDisplay";
 
 const Gallery = () => {
 
-    const [selectedImg, setSelectedImg] = useState(null);
-
     return (
         <React.Fragment>
-            <PhotoGallery setSelectedImg={setSelectedImg} />
-            { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} /> }
+            <GalleryDisplay/>
         </React.Fragment>
     );
 }

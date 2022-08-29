@@ -1,15 +1,15 @@
 import React from 'react';
-import Averys_table from "./photos/Averys_table.JPEG";
-import coltons_table from "./photos/coltons_table.JPEG";
-import Darrens_desk from "./photos/Darrens_desk.JPG";
-import my_desk from "./photos/my_desk.jpg";
-import natalies_table from "./photos/Natalies_table.JPG";
-import epoxy_coffee from "./photos/landing_image.png";
-import './css/gallery.css';
+import Averys_table from "../photos/Averys_table.JPEG";
+import coltons_table from "../photos/coltons_table.JPEG";
+import Darrens_desk from "../photos/Darrens_desk.JPG";
+import my_desk from "../photos/my_desk.jpg";
+import natalies_table from "../photos/Natalies_table.JPG";
+import epoxy_coffee from "../photos/landing_image.png";
+import '../css/gallery.css';
 
-const PhotoGallery = ({ setSelectedImg }) => {
+const WoodworkingDisplay = ({ setSelectedImg }) => {
     return (
-        <div className="grid">
+        <div className="grid_photo">
             <div className="grid_item">
                 <img src={epoxy_coffee} alt="Epoxy" onClick={() => setSelectedImg(epoxy_coffee)}/>
             </div>
@@ -32,4 +32,4 @@ const PhotoGallery = ({ setSelectedImg }) => {
     )
 }
 
-export default PhotoGallery;
+export default WoodworkingDisplay;

@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
 
-
     const exitPreview = (e) => {
         if(e.target.classList.contains('backdrop')) {
             setSelectedImg(null);
