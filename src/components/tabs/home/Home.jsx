@@ -1,5 +1,5 @@
 import React from "react";
-import landing from "./photos/landing.png";
+import landing from "./photos/Mirror.png";
 import ImageSlider from "../../slider/ImageSlider";
 import './home.css';
 
