@@ -21,6 +21,8 @@
 }
   
 .grid_photo img {
+    max-width: 98%;
+    max-height: fit-content;
     opacity: .9;
 }
   
