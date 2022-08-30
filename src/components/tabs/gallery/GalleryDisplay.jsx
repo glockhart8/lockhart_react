@@ -2,9 +2,7 @@ import woodworking from "./photos/woodworking.png";
 import photography from "./photos/photography.png";
 import graphics from "./photos/graphics.png";
 
-import {
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 
 
