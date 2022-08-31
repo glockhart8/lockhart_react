@@ -1,7 +1,3 @@
-import woodworking from "./photos/woodworking.png";
-import photography from "./photos/photography.png";
-import graphics from "./photos/graphics.png";
-
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -11,17 +7,17 @@ const GalleryDisplay = () => {
         <div className="category">
             <div className="category_img">
                 <Link to="./photography">
-                    <img src={photography} alt="cherry2"/>
+                    <img src={process.env.PUBLIC_URL + "/images/photography.png"} alt="cherry2"/>
                 </Link>
             </div>
             <div className="category_img" >
                 <Link to="./graphics">
-                    <img src={graphics} alt="graphics"/>
+                    <img src={process.env.PUBLIC_URL + "/images/graphics.png"} alt="graphics"/>
                 </Link>
             </div>
             <div className="category_img">
                 <Link to="./woodworking">
-                    <img src={woodworking} alt="cherry"/>
+                    <img src={process.env.PUBLIC_URL + "/images/woodworking.png"} alt="cherry"/>
                 </Link>
             </div>
         </div>

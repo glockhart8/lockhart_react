@@ -1,43 +1,30 @@
-import shiloh from "../photos/shiloh.png";
-import shiloh_small from "../photos/shiloh_small.png";
-import boats from "../photos/boats_2.png";
-import boats_small from "../photos/boats_small.png";
-import canon from "../photos/canon_fireball.png";
-import canon_small from "../photos/canon_small.png";
-import dash from "../photos/dash.png";
-import dash_small from "../photos/dash_small.png";
-import ryan from "../photos/ryan.png";
-import ryan_small from "../photos/ryan_small.png";
-import bmw from "../photos/white_bmw.png";
-import bmw_small from "../photos/white_bmw_small.png";
-import lincoln from "../photos/lincoln.png";
-import lincoln_small from "../photos/lincoln_small.png";
 import '../css/gallery.css';
+// import { isPropertyAccessChain } from "typescript";
 
 const PhotoDisplay = ({ setSelectedImg }) => {
     return (
         <div className="grid_photo">
 
             <div className="grid_item">
-                <img src={shiloh_small} alt="dog" onClick={() => setSelectedImg(shiloh)}/>
+                <img src={process.env.PUBLIC_URL + "/images/shiloh_small.png"} alt="dog" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/shiloh.png")}/>
             </div>
             <div className="grid_item">
-                <img src={boats_small} alt="boats" onClick={() => setSelectedImg(boats)}/>
+                <img src={process.env.PUBLIC_URL + "/images/boats_small.png"} alt="boats" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/boats_2.png")}/>
             </div>
             <div className="grid_item">
-                <img src={canon_small} alt="camera" onClick={() => setSelectedImg(canon)}/>
+                <img src={process.env.PUBLIC_URL + "/images/canon_small.png"} alt="camera" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/canon_small.png")}/>
             </div>
             <div className="grid_item">
-                <img src={dash_small} alt="dash" onClick={() => setSelectedImg(dash)}/>
+                <img src={process.env.PUBLIC_URL + "/images/dash_small.png"} alt="dash" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/dash.png")}/>
             </div>
             <div className="grid_item">
-                <img src={bmw_small} alt="bmw" onClick={() => setSelectedImg(bmw)}/>
+                <img src={process.env.PUBLIC_URL + "/images/white_bmw_small.png"} alt="bmw" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/white_bmw.png")}/>
             </div>
             <div className="grid_item">
-                <img src={lincoln_small} alt="lincoln_rock" onClick={() => setSelectedImg(lincoln)}/>
+                <img src={process.env.PUBLIC_URL + "/images/lincoln_small.png"} alt="lincoln_rock" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/lincoln.png")}/>
             </div>
             <div className="grid_item">
-                <img src={ryan_small} alt="ryan" onClick={() => setSelectedImg(ryan)}/>
+                <img src={process.env.PUBLIC_URL + "/images/ryan_small.png"} alt="ryan" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/ryan.png")}/>
             </div>
         </div>
     )

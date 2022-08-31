@@ -1,38 +1,26 @@
 import React from 'react';
-import Averys_table from "../photos/Averys_table.JPEG";
-import avery_table_small from "../photos/avery_table_small.png";
-import coltons_table from "../photos/coltons_table.JPEG";
-import coltons_table_small from "../photos/coltons_small.png";
-import Darrens_desk from "../photos/Darrens_desk.JPG";
-import darrens_desk_small from "../photos/darren_small.png";
-import my_desk from "../photos/my_desk.jpg";
-import my_desk_small from "../photos/my_desk_small.png";
-import natalies_table from "../photos/Natalies_table.JPG";
-import natalies_table_small from "../photos/natalies_table_small.png";
-import epoxy_coffee from "../photos/landing_image.png";
-import epoxy_coffee_small from "../photos/landing_image_small.png";
 import '../css/gallery.css';
 
 const WoodworkingDisplay = ({ setSelectedImg }) => {
     return (
         <div className="grid_photo">
             <div className="grid_item">
-                <img src={epoxy_coffee_small} alt="Epoxy" onClick={() => setSelectedImg(epoxy_coffee)}/>
+                <img src={process.env.PUBLIC_URL + "/images/landing_image_small.png"} alt="Epoxy" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/landing_image.png")}/>
             </div>
             <div className="grid_item">
-                <img src={natalies_table_small} alt="Round" onClick={() => setSelectedImg(natalies_table)}/>
+                <img src={process.env.PUBLIC_URL + "/images/natalies_table_small.png"} alt="Round" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/Natalies_table.JPG")}/>
             </div>
             <div className="grid_item">
-                <img src={coltons_table_small} alt="Coffee" onClick={() => setSelectedImg(coltons_table)}/>
+                <img src={process.env.PUBLIC_URL + "/images/coltons_small.png"} alt="Coffee" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/coltons_table.JPG")}/>
             </div>
             <div className="grid_item">
-                <img src={my_desk_small} alt="Desk" onClick={() => setSelectedImg(my_desk)}/>
+                <img src={process.env.PUBLIC_URL + "/images/my_desk_small.png"} alt="Desk" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/my_desk.jpg")}/>
             </div>
             <div className="grid_item">
-                <img src={avery_table_small} alt="Gray" onClick={() => setSelectedImg(Averys_table)}/>
+                <img src={process.env.PUBLIC_URL + "/images/avery_table_small.png"} alt="Gray" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/Averys_table.png")}/>
             </div>
             <div className="grid_item">
-                <img src={darrens_desk_small} alt="Dark Table" onClick={() => setSelectedImg(Darrens_desk)}/>
+                <img src={process.env.PUBLIC_URL + "/images/darren_small.png"} alt="Dark Table" onClick={() => setSelectedImg(process.env.PUBLIC_URL + "/images/Darrens_desk.JPG")}/>
             </div>
         </div>
     )
