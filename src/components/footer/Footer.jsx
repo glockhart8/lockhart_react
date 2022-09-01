@@ -1,5 +1,4 @@
 import React from "react";
-import { FaInstagram, FaYoutube, FaTwitch } from "react-icons/fa";
 import './footer.css';
 
 const Footer = () => {
@@ -12,9 +11,9 @@ const Footer = () => {
                 Powered by GRIFFIN LOCKHART
             </h2>
             <h3>
-                <br/> <a className="insta" href="https://www.instagram.com/griffinjl8/"><FaInstagram /></a>
-                <a className="insta" href="https://www.youtube.com/channel/UC1l1kwF9kCz3zzcswlKigRA"><FaYoutube /></a>
-                <a className="insta" href="https://www.twitch.tv/kidgriffy"><FaTwitch /></a>
+                <br/> <i class="fab fa-instagram footer_icon" href="https://www.instagram.com/griffinjl8/" />
+                <i class="fab fa-youtube footer_icon" href="https://www.youtube.com/channel/UC1l1kwF9kCz3zzcswlKigRA" />
+                <i class="fab fa-twitch footer_icon" href="https://www.twitch.tv/kidgriffy" />
             </h3>
         </footer>
     );

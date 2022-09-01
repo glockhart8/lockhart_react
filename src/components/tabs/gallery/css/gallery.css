@@ -27,9 +27,6 @@
 }
   
 .grid_photo img:hover {
-    -moz-box-shadow: 0 0 5px rgb(0, 0, 0);
-    -webkit-box-shadow: 0 0 5px rgb(0, 0, 0);
-    box-shadow: 0 0 5px rgb(0, 0, 0);
     opacity: 1;
 }
 

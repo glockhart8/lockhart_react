@@ -4,7 +4,7 @@ import CoffeeTables from "../cards/CoffeeTables";
 import Coasters from "../cards/Coasters";
 import Desks from "../cards/Desks";
 import Tables from "../cards/Tables";
-import './navigation.css';
+import './css/navigation.css';
 
 import Home from '../tabs/home/Home';
 import Gallery from '../tabs/gallery/Gallery';
@@ -17,40 +17,28 @@ import {
   Route,
   Link
 } from "react-router-dom";
+// import { FaHamburger, FaTimes } from "react-icons/fa";
 
 
 const Navigation = () => {
-
-	// Burger Menu Toggle
-	const navSlide = () => {
-		const burger = document.querySelector('.burger');
-		const nav = document.querySelector('.nav-links');
-		const navLinks = document.querySelectorAll('.nav-links li');
-
-		// burger.addEventListener('click', ()=> {
-			// Toggle Nav
-			nav.classList.toggle('active');
-
-			navLinks.forEach((link, index) => {
-				if(link.style.animation) {
-					link.style.animation = '';
-				} else {
-					link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .3}s`;
-				}
-			});
-
-			// Burger Animation
-			burger.classList.toggle('toggleBurger');
-		// })
-	}
-
 	// Creating a state for the link 
+	const [click, setClick] = useState(false);
 	const [homeLink, setHomeLinkActive] = useState(true);
 	const [galleryLink, setWoodworkingLinkActive] = useState(false);
 	const [contactLink, setContactLinkActive] = useState(false);
 
+	// Handles the burger menu animation
+	const handleBurgerClick = () => {
+		setClick(!click);
+
+		// Burger Animation
+		const burger = document.querySelector('.burger');
+		burger.classList.toggle('toggleBurger');
+	}
+
 	// Toggling the links based on which is active
 	const toggleNavActive = (param) => {
+		setClick(false);
 		switch(param) {
 			case 1:
 				setHomeLinkActive(true);
@@ -76,22 +64,35 @@ const Navigation = () => {
 
     return (
         <React.Fragment>
-                <div onClick={navSlide} className="burger">
-					<div className="line1"></div>
-					<div className="line2"></div>
-					<div className="line3"></div>
-				</div>
-				<div id="header">
-					<a href="index.html" id="main_logo" title="Home">
-						<img className="banner_logo" src={banner_pic} alt="LOCKHART" />
-					</a>
-				</div>
-				<nav>
-					<ul className="nav-links">
-						<li className="first"><Link className={homeLink ? "active" : ""} onClick={() => toggleNavActive(1)}  id="home" to="./">HOME</Link></li>
-						<li className="notfirst"><Link className={galleryLink ? "active" : ""} onClick={() => toggleNavActive(2)} id="gallery" to="./gallery">GALLERY</Link></li>
-						<li className="notfirst"><Link className={contactLink ? "active" : ""} onClick={() => toggleNavActive(3)} id="contact" to="./contact">CONTACT</Link></li>
-					</ul>
+
+				<nav className="navbar" id="header">
+					<div className="navbar-container">
+						<Link to="/" id="navbar_logo" title="Home">
+							<img className="banner_logo" src={banner_pic} alt="LOCKHART" />
+						</Link>
+						<div onClick={handleBurgerClick} className="burger"> 
+							<div className="line1"></div>
+							<div className="line2"></div>
+							<div className="line3"></div>
+						</div>
+						<ul className={click ? 'nav-menu active' : 'nav-menu'}>
+							<li className="nav-item">
+								<Link to='/' className={homeLink ? "nav-links active" : "nav-links"} onClick={() => toggleNavActive(1)}>
+									Home
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to='/gallery' className={galleryLink ? "nav-links active" : "nav-links"} onClick={() => toggleNavActive(2)}>
+									Gallery
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to='/contact' className={contactLink ? "nav-links active" : "nav-links"} onClick={() => toggleNavActive(3)}>
+									Contact
+								</Link>
+							</li>
+						</ul>
+					</div>
 				</nav>
 				<Switch>
 					<Route path="/gallery">
