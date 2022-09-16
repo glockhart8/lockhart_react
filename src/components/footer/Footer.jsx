@@ -11,9 +11,9 @@ const Footer = () => {
                 Powered by GRIFFIN LOCKHART
             </h2>
             <h3>
-                <br/> <i class="fab fa-instagram footer_icon" href="https://www.instagram.com/griffinjl8/" />
-                <i class="fab fa-youtube footer_icon" href="https://www.youtube.com/channel/UC1l1kwF9kCz3zzcswlKigRA" />
-                <i class="fab fa-twitch footer_icon" href="https://www.twitch.tv/kidgriffy" />
+                <br/> <a href="https://www.instagram.com/griffinjl8/"><i class="fab fa-instagram footer_icon"/></a>
+                <a href="https://www.youtube.com/channel/UC1l1kwF9kCz3zzcswlKigRA"><i class="fab fa-youtube footer_icon"/></a>
+                <a href="https://www.twitch.tv/kidgriffy"><i class="fab fa-twitch footer_icon"/></a>
             </h3>
         </footer>
     );
